@@ -181,8 +181,13 @@ top_page_views = merged_df.nlargest(10, "Page Views - Total")
 # "AllKeepaReports" dosyasını oku
 keepa_df = pd.read_excel("AllKeepaReports.xlsx")
 
+# Streamlit uygulamasını başlatın
+st.title("En Çok Görüntülenmeye Sahip Top 10 Ürün")
+
 # Resim URL'lerini ve bağlantılarını saklayacak bir liste oluşturun
 image_links = []
+
+
 
 # İlgili verileri yazdır
 for idx, row in enumerate(top_page_views.iterrows(), start=1):
